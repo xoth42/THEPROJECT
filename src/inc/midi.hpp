@@ -5,12 +5,20 @@
 
 namespace midi
 {
+
+class Note
+{
+public:
+	int pitch;
+	int dur;
+	Note* _next;
+};
+
 class MidiFile
 {
 public:
     MidiFile(std::string path);
 private:
-	std::vector<int> notes;
-
+	Note* first = nullptr;
 };
 } 
